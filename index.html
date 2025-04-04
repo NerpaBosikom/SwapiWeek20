@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Swapi</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SWAPI Finder</h1>
+      <label for="category">Выбери категорию:</label>
+      <select id="category">
+        <option value="people">Люди</option>
+        <option value="planets">Планеты</option>
+        <option value="starships">Корабли</option>
+      </select>
+
+      <label for="id">Введите ID (1-10):</label>
+      <input type="number" id="id" min="1" max="10" value="1" />
+
+      <button onclick="fetchData()">Искать</button>
+
+      <p id="loading">Идёт загрузка...</p>
+      <div id="result"></div>
+      <p id="error"></p>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
